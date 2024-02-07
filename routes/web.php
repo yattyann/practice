@@ -23,3 +23,8 @@ Route::get('/list', [App\Http\Controllers\ArticleController::class, 'showList'])
 Route::get('/regist',[App\Http\Controllers\ArticleController::class, 'showRegistForm'])->name('regist');
 
 Route::post('/regist',[App\Http\Controllers\ArticleController::class, 'registSubmit'])->name('submit');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
